@@ -11,8 +11,7 @@
 4. As a User, I want `+` button disappear when the number in text is greater than 10, and the `+` button appear again when the  the number is less than or equals to 10.
 5. As a User, I want background color of the text 'number: *' to be green ,when the number in text is less than 0.
 6. As a User, I want background color of the text 'number: *' to be red, when the number in text is greater than 10.
-7. As a User, I want background color of the text 'number: *' to be white, when the number in text is greater than 0 and less than or equals to 10.
-8. As a User, I want a new `reset` button aside to `-` button, when I click the `reset` button, then I can see the text is `number: 0`.
+7. As a User, I want a new `reset` button aside to `-` button, when I click the `reset` button, then I can see the text is `number: 0`.
 
 
 ## Tips 
