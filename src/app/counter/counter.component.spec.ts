@@ -61,5 +61,17 @@ describe('CounterComponent', () => {
     expect(minusBtn).toBeFalsy();
   });
   
+  it('should hide plus button when count number greater than 10', () => {
+    // given
+    component.count = 11;
+    
+    // when
+    fixture.detectChanges();
+
+    // then
+    const plusBtn = fixture.nativeElement.querySelector('[data-test="plusBtn"]')
+    expect(plusBtn).toBeFalsy();
+  });
+  
 
 });
