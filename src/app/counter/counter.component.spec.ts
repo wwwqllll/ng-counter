@@ -73,5 +73,20 @@ describe('CounterComponent', () => {
     expect(plusBtn).toBeFalsy();
   });
   
+  it('should return true when count not less than 0', () => {
+    // given
+    component.count = 1;
+    
+    // when
+    expect(component.isGreaterOrEqualThanZero()).toBeTrue();
+  });
+
+  it('should return false when count less than 0', () => {
+    // given
+    component.count = -1;
+    
+    // when
+    expect(component.isGreaterOrEqualThanZero()).toBeFalse();
+  });
 
 });
