@@ -100,8 +100,8 @@ describe('CounterComponent', () => {
     fixture.detectChanges();
 
     // then
-    const displayCount = fixture.nativeElement.querySelector('[data-test="displayCount"]');
-    expect(displayCount.textContent).toEqual('number: 0');
+    expect(component.count).toEqual(0);
+
   });
 
 });
