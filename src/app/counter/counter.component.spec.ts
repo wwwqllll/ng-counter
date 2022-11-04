@@ -49,4 +49,17 @@ describe('CounterComponent', () => {
     expect(displayCount.textContent).toEqual('number: -1');
   });
   
+  it('should hide minus button when count number less than 0', () => {
+    // given
+    component.count = -1;
+    
+    // when
+    fixture.detectChanges();
+
+    // then
+    const minusBtn = fixture.nativeElement.querySelector('[data-test="minusBtn"]')
+    expect(minusBtn).toBeFalsy();
+  });
+  
+
 });
