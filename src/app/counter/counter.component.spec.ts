@@ -89,4 +89,19 @@ describe('CounterComponent', () => {
     expect(component.isGreaterOrEqualThanZero()).toBeFalse();
   });
 
+  it('should set number to 0 when click reset button', () => {
+    // given
+    component.count = -1;
+    const resetBtn = fixture.nativeElement.querySelector('[data-test="resetBtn"]');
+
+    
+    // when
+    resetBtn.click();
+    fixture.detectChanges();
+
+    // then
+    const displayCount = fixture.nativeElement.querySelector('[data-test="displayCount"]');
+    expect(displayCount.textContent).toEqual('number: 0');
+  });
+
 });
