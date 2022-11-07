@@ -23,7 +23,7 @@ describe('CounterComponent', () => {
 
   it('should add 1 when click plus button', () => {
     // given
-    component.count = 0;
+    component.counter.count = 0;
     const plusBtn = fixture.nativeElement.querySelector('[data-test="plusBtn"]');
     
     // when
@@ -37,7 +37,7 @@ describe('CounterComponent', () => {
 
   it('should minus 1 when click minus button', () => {
     // given
-    component.count = 0;
+    component.counter.count = 0;
     const minusBtn = fixture.nativeElement.querySelector('[data-test="minusBtn"]');
     
     // when
@@ -51,7 +51,7 @@ describe('CounterComponent', () => {
   
   it('should hide minus button when count number less than 0', () => {
     // given
-    component.count = -1;
+    component.counter.count = -1;
     
     // when
     fixture.detectChanges();
@@ -63,7 +63,7 @@ describe('CounterComponent', () => {
   
   it('should hide plus button when count number greater than 10', () => {
     // given
-    component.count = 11;
+    component.counter.count = 11;
     
     // when
     fixture.detectChanges();
@@ -75,7 +75,7 @@ describe('CounterComponent', () => {
   
   it('should return true when count not less than 0', () => {
     // given
-    component.count = 1;
+    component.counter.count = 1;
     
     // when
     expect(component.isGreaterOrEqualThanZero()).toBeTrue();
@@ -83,7 +83,7 @@ describe('CounterComponent', () => {
 
   it('should return false when count less than 0', () => {
     // given
-    component.count = -1;
+    component.counter.count = -1;
     
     // when
     expect(component.isGreaterOrEqualThanZero()).toBeFalse();
@@ -91,7 +91,7 @@ describe('CounterComponent', () => {
 
   it('should set number to 0 when click reset button', () => {
     // given
-    component.count = -1;
+    component.counter.count = -1;
     const resetBtn = fixture.nativeElement.querySelector('[data-test="resetBtn"]');
 
     
@@ -100,7 +100,7 @@ describe('CounterComponent', () => {
     fixture.detectChanges();
 
     // then
-    expect(component.count).toEqual(0);
+    expect(component.counter.count).toEqual(0);
 
   });
 

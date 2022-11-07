@@ -1,0 +1,6 @@
+<button (click)="doCreateCounter()" nz-button nzType="primary">create counter</button>
+<app-counter *ngFor="let item of counters" [counter]="item"></app-counter>
+<div>Sum: {{sumCounts()}}</div>
+<span nz-icon [nzType]="'star'" [nzTheme]="'fill'" [nzSpin] = "true"></span>
+<button data-test="resetBtn" (click)="resetAll()" nz-button nzType="primary">reset</button>
+<span nz-icon [nzType]="'star'" [nzTheme]="'fill'" [nzSpin]="true"></span>
